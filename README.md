@@ -29,9 +29,9 @@ root
 └── runPytest.bat
 
 
-- ` twikkie_autotest/`: This directory contains the  test files
+- `twikkie_autotest/`: This directory contains the  test files
     - `base/`:
-        - ` __init__.py/`:  Initializes the base module.
+        - `__init__.py/`:  Initializes the base module.
         - `base_api.py/`:   Contains base functionalities for API interactions, providing common methods and utilities for making API requests.
         - `base_page.py/`:  Provides a base class for all page objects, including common methods for interacting with web elements and handling page-specific actions.
         - `selenium_driver.py/`: Manages the Selenium WebDriver setup and configuration, including browser initialization and teardown procedures.
@@ -57,10 +57,3 @@ root
 - `pytest.ini`: Configuration file for pytest.
 - `README.md`: This file, providing an overview of the project.
 - `runPytest.bat`: Batch script to run pytest.
-
-
-## How to Run
-
-1. **Clone the repository**
-```
-git clone https://github.com/vardanyangag/twikkie_autotest.git
