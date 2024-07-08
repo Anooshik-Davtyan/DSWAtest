@@ -78,3 +78,15 @@ root
 2. Navigate to the project directory:
    ```sh
    cd twikkie_autotest
+3. Install the required Python packages:
+    ```sh
+   pip install -r requirements.txt
+
+### Running Tests
+
+1. Prepare the environment by running:
+   ```sh
+   prepare_environment.bat
+2. Execute tests using pytest:
+   ```sh
+   runPytest.bat
