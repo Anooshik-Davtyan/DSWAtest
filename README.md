@@ -2,58 +2,68 @@
 
 ```
 root
-├── cypress/
-│   ├── e2e/
-|   |   ├── signIn-functionality.cy.js
-│   │   ├── signUp-functionality.cy.js
-|   ├── support/
-|   |   ├── Methods
-|   |   |   ├── constants.js
-|   |   |   ├── validators.js
-|   |   ├── SignIn  
-|   |   |   ├── selectors-signin.js
-|   |   |   ├── signin-helpers.js
-|   |   ├── SignUp
-|   |   |   ├── selectors-signup.js
-|   |   |   ├── signup-helpers.js
-|   |   ├── commands.js
-|   |   ├── e2e.js
-├── node_modules/
+├── twikkie_autotest/
+│   ├── base/
+|   |   ├── __init__.py
+│   │   ├── base_api.py
+│   │   ├── base_page.py
+│   │   ├── selenium_driver.py
+|   ├── drivers/
+|   ├── pages/
+|   |   ├── login_page
+|   |   |   ├── __init__.py
+|   |   |   ├── login_page.py
+|   |   ├── signup_page 
+|   |   |   ├── __init__.py
+|   |   |   ├── signup_page.py
+|   ├── tests/
+|   |   ├── test_login_page
+|   |   |   ├── test_login_page.py
+|   |   ├── test_signup_page
+|   |   |   ├── test_signup_page.py
+|   ├── utilities/
+|   |   ├── custom_logger.py
+|   |   ├── test_status.py
+|   |   ├── util.py
 ├── .gitignore
-├── cypress.config.js
-├── package.json
-├── package-lock.json
-└── README.md
-```
-- `cypress/`: This directory contains the Cypress test files
-    - `e2e/`: Contains test files
-        - `signIn-functionality.cy.js/`: Contains test suite as focusing on Mobile Responsiveness Testing along with Sign-In Functionality across different devices
-        - `signUp-functionality.cy.js/`: Contains test suite as focusing on Mobile Responsiveness Testing along with Sign-Up Functionality across different devices
-    - `support/`: Contains all config files
-        - `Methods`/: Contains test data and validation functions
-            - `constants.js`/: Contains test data
-            - `validators.js`/: Contains validation functions
-        - `SignIn`/: Contains selectors and functions for sign in functionality
-            - `selectors-signin.js`/: Contains selectors for tests on sign in
-            - `signin-helpers.js`/: Contains functions for tests on sign in
-        - `SignUp`/: Contains selectors and functions for sign up functionality
-            - `selectors-signup.js`/: Contains selectors for tests on sign up
-            - `signup-helpers.js`/: Contains functions for tests on sign up
-- `node_modules/`: The npm packages and dependencies required for the project
-- `cypress.config.js`: Cypress configuration file
-- `.gitignore`: Contains files and directories that should not be committed
-- `package.json`: The npm package file containing project dependencies and scripts
+├── prepare_enviroment.bat
+├── pytest.ini
+├── README.md
+└── runPytest.bat
+
+
+- `twikkie_autotest/`: This directory contains the  test files
+    - `base/`:
+        - `__init__.py/`:  Initializes the base module.
+        - `base_api.py/`:   Contains base functionalities for API interactions, providing common methods and utilities for making API requests.
+        - `base_page.py/`:  Provides a base class for all page objects, including common methods for interacting with web elements and handling page-specific actions.
+        - `selenium_driver.py/`: Manages the Selenium WebDriver setup and configuration, including browser initialization and teardown procedures.
+    - `drivers/`:
+    - `pages/`: Contains login and signup files
+        - `login_page`/:
+            - `_init__.py`/: Initializes the base module.
+            - `login_page.py`/: Contains locators, test data and functions for login page
+        - `signup_page `/: 
+            - `__init__.py`/: Initializes the base module.
+            - `signup_page.py`/: Contains locators, test data and functions for signup page
+    - `tests/`:
+        - `test_login_page`/:
+            - `test_login_page.py`/: Contains test cases on login functionality
+        - `test_signup_page`/: 
+            - `test_signup_page.py`/: Contains test cases on signup functionality
+    - `utilities/`:
+        - `custom_logger.py`/: Custom logging utility for creating detailed test execution logs.
+        - `test_status.py`/: Utility for tracking and reporting the status of test cases.
+        - `util.py`/: Contains various utility functions used across the project.
+- `.gitignore/`: Contains files and directories that should not be committed 
+- `prepare_enviroment.bat`: Batch script for setting up the test environment.
+- `pytest.ini`: Configuration file for pytest.
+- `README.md`: This file, providing an overview of the project.
+- `runPytest.bat`: Batch script to run pytest.
+
 
 ## How to Run
 
 1. **Clone the repository**
 ```
-git clone https://github.com/Anooshik-Davtyan/Neetry.git
-cd Neetry
-```
-2. **Open Cypress**
-```
-npx cypress open
-```
-
-3. **Run a desired test file only by clicking on it**
+git clone https://github.com/vardanyangag/twikkie_autotest.git
