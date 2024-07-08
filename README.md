@@ -62,8 +62,16 @@ root
 - `runPytest.bat`: Batch script to run pytest.
 
 
-## How to Run
+## Getting Started
 
-1. **Clone the repository**
-```
-git clone https://github.com/vardanyangag/twikkie_autotest.git
+### Prerequisites
+
+- Python 3.8 or higher
+- Selenium WebDriver
+- pytest
+
+### Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/twikkie_autotest.git
